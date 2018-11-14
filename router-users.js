@@ -10,6 +10,7 @@ var RouletteCollection = require('./model_Roulette.js')
 */
 
 // get_player_Crash :
+
 router.get('/get_player_Crash', function(req, res) {
     CrashCollection.find({}, function (error, results) {
         res.json(results);
@@ -18,6 +19,7 @@ router.get('/get_player_Crash', function(req, res) {
 });
 
 // get_player_Roulette :
+
 router.get('/get_player_Roulette', function(req, res) {
     RouletteCollection.find({}, function (error, results) {
         res.json(results);
@@ -81,6 +83,7 @@ router.post('/add_player_Crash', function(req, res) {
 
 
 // add_player_Roulette :
+
 router.post('/add_player_Roulette', function(req, res) {
     var body = req.body;
     let Roulette = new RouletteCollection(body)
