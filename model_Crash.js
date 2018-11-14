@@ -29,6 +29,16 @@ var CrashSchema = new mongoose.Schema({
         required: true
     },
 
+    depot: {
+        type: String,
+        required: true
+    },
+
+    num_cb: {
+        type: String,
+        required: true
+    },
+
     game: {
         type: String,
         required: true
