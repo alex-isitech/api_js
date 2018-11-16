@@ -9,6 +9,7 @@ var port = 3000;
  
 var app = express(); 
 var router = require('./router-users');
+var router2 = require('./router-2');
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose') ;
 
@@ -25,7 +26,8 @@ console.log("Connexion");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
- app.use('/', router);
+ app.use('/api', router);
+ app.use('/', router2);
 // Démarrer le serveur 
 app.listen(port, hostname, function(){
 	console.log("Mon serveur fonctionne sur http://"+ hostname +":"+port+"\n"); 

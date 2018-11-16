@@ -2,7 +2,7 @@
 var mongoose = require('mongoose')
 var RouletteSchema = new mongoose.Schema({
     bet: {
-        type: String,
+        type: Number,
         required: true
     },
     player:
@@ -20,7 +20,7 @@ var RouletteSchema = new mongoose.Schema({
 
     bet_session:{
 
-        type: String,
+        type: Number,
         required: true
     },
 
@@ -30,13 +30,13 @@ var RouletteSchema = new mongoose.Schema({
     },
 
     depot: {
-        type: String,
+        type: Number,
         required: true
     },
 
     num_cb: {
-        type: String,
-        required: true
+        type: Number,
+        required: false
     },
 
     game: {
